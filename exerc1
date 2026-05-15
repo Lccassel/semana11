@@ -1,0 +1,26 @@
+# vetor com 8 elementos
+vet = []
+
+cont_maior_30 = 0
+soma_maior_30 = 0
+soma_total = 0
+
+# leitura dos valores
+for i in range(8):
+    valor = int(input(f"Digite o {i+1}º valor: "))
+    vet.append(valor)
+
+    soma_total += valor
+
+    if valor > 30:
+        cont_maior_30 += 1
+        soma_maior_30 += valor
+
+# mostrando o vetor
+print("\nValores do vetor:")
+print(vet)
+
+# resultados
+print("\nQuantidade de números maiores que 30:", cont_maior_30)
+print("Soma dos números maiores que 30:", soma_maior_30)
+print("Soma total dos números:", soma_total)
