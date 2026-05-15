@@ -1,0 +1,49 @@
+vet = []
+
+while True:
+    print("\nMENU")
+    print("1 - Inserir item")
+    print("2 - Retirar item")
+    print("3 - Listar itens")
+    print("4 - Retirar todos os itens")
+    print("5 - Sair")
+
+    opcao = int(input("Escolha uma opção: "))
+
+    # 1 - Inserir item
+    if opcao == 1:
+        valor = int(input("Digite o valor para inserir: "))
+        vet.append(valor)
+        print("Valor inserido com sucesso!")
+
+    # 2 - Retirar item
+    elif opcao == 2:
+        valor = int(input("Digite o valor para remover: "))
+
+        if valor in vet:
+            vet.remove(valor)
+            print("Valor removido com sucesso!")
+        else:
+            print("Valor não encontrado!")
+
+    # 3 - Listar itens
+    elif opcao == 3:
+        if len(vet) == 0:
+            print("Vetor vazio!")
+        else:
+            print("Itens do vetor:")
+            for item in vet:
+                print(item)
+
+    # 4 - Retirar todos os itens
+    elif opcao == 4:
+        vet.clear()
+        print("Todos os itens foram removidos!")
+
+    # 5 - Sair
+    elif opcao == 5:
+        print("Encerrando o programa...")
+        break
+
+    else:
+        print("Opção inválida! Tente novamente.")
