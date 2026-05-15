@@ -1,0 +1,18 @@
+valores = []
+
+# Leitura de 10 valores distintos
+while len(valores) < 10:
+    num = float(input(f"Digite o {len(valores)+1}º valor: "))
+    
+    if num in valores:
+        print("Valor repetido! Digite um valor distinto.")
+    else:
+        valores.append(num)
+
+# Filtrar valores maiores que 100
+maiores_que_100 = [v for v in valores if v > 100]
+
+# Resultados
+print("\nValores digitados:", valores)
+print("Quantidade de valores maiores que 100:", len(maiores_que_100))
+print("Valores maiores que 100:", maiores_que_100)
